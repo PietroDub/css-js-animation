@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação</title>
+
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+        }
+        .louquinho {
+            height: 200px;
+            width: 200px;
+            background: greenyellow;
+            border-radius: 20px;
+            animation-name: nome;
+            animation-duration: 2s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            animation-duration: alternate;
+
+        }
+        .easeout{
+            animation: nome 2s ease-out;
+            background: red;
+            animation-iteration-count: infinite;
+            animation-duration: alternate;
+            animation-delay: 1s;
+        }
+        .easeinout{
+            animation: nome 2s ease-in-out;
+            background: rgb(255, 238, 0);
+            animation-iteration-count: infinite;
+            animation-duration: alternate;
+        }
+        .novo{
+            animation-name: loucura;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            background: blue;
+        }
+
+        .npc{
+            background-color: rgb(255, 85, 142);
+            animation-name: pulo;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+.test{
+            background-color: aqua;
+            animation-name: aparecer;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+
+        @keyframes nome{
+            from{
+                transform: translateX(0);
+            }
+
+            to{
+                transform: translate(500px);
+            }
+        }
+
+        @keyframes loucura {
+            0%{
+                transform: translate(0) scale(2);
+            }
+            25%{
+                transform: translate(calc(100vw - 200px)) rotate((90deg));
+            }
+            50%{
+                transform: translate(0, calc(100vh - 200px)) rotate((100deg));
+            }
+            100%{
+                transform: translate(calc(100vw - 200px), calc(100vh - 200px)) scale(0.5);
+            }
+
+        }
+
+        @keyframes pulo{
+            0%{
+                position: absolute;
+                top: bottom 0px;
+                left: 0px;
+            }
+            50%{
+                position: absolute;
+                bottom: 30px;
+                left: 20px;
+             }
+            100%{
+                bottom: 0px;
+                left: 30px;
+            }
+        }
+
+        @keyframes aparecer {
+            0%{
+                opacity: 0%;
+            }
+            100%{
+                opacity: 100%;
+            }
+        }
+    </style>
+</head>
+<body style="background-color: black;">
+    <div class="louquinho">
+    </div>
+    <div class="box easeinout"></div>
+    <div class="box easeout"></div>
+    <div class="box novo"></div>
+    <div class="box npc"></div>
+    <div class="box test"></div>
+</body>
+</html
