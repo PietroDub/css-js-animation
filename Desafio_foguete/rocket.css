@@ -1,0 +1,119 @@
+/*Animações*/
+
+@keyframes lancar{
+    from {
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-150px);
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes rotacao{
+    from {
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/*CSS ESTÉTICO*/
+
+
+
+h1{
+    font-size: 40px;
+}
+p{
+    font-size: 15px;
+}
+
+.foguete{
+    width: 5em;
+    animation-name: lancar;
+    animation-timing-function: ease-in-out;
+    animation-duration: 5s;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+}
+
+.terra{
+    height: 10em;
+    width: 10em;
+    animation-name: rotacao;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+}
+
+
+.container{
+    width: 33vw;
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+}
+
+.gamer{
+    height: 75vh;
+    left: 50%;
+    transform: translate(-50%, 25%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    justify-content: space-between;
+}
+
+.borda {
+    width: 10px;
+    height: 230px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+}
+
+.combo {
+    display: flex;
+    position: absolute;
+    bottom: 50%;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.botao{
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: red;
+    background: black;
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    margin-top: 15px;
+    border-radius: 10px;
+
+    transform: 1s ease-in ;
+}
+
+.botao:hover{
+    background:red;
+    color: black;
+    border-color: black;
+}
