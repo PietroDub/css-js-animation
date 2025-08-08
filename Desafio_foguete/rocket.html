@@ -20,6 +20,17 @@
     </style>
 </head>
 <body class="dm-sans">
+
+    <div class="estrelas">
+        <div class="estrela"></div>
+        <div class="estrela"></div>
+        <div class="estrela"></div>
+        <div class="estrela"></div>
+        <div class="estrela"></div>
+        <div class="estrela"></div>
+        <div class="estrela"></div>
+    </div>
+
     <section class="combo">
         <div class="borda"></div>
         <div class="container"><h1>🚀 3. Lançador de Foguetes</h1>
@@ -29,7 +40,7 @@
         Fumaça animada com opacity e blur.
         Estrelas piscando com animation-delay.
     </p>
-    <button class="botao">Lançar</button>
+    <button class="botao" onclick="launch()">Lançar</button>
 </div>
     </section>
 
@@ -37,9 +48,18 @@
         <img class="terra" src="terra.png" alt="">
         <div style="display: flex; flex-direction: column; align-items: center;">
             <img class="foguete" src="rocket.png" alt="">
-        <img class="terra" src="terra.png" alt="">
+            <img class="terra" src="terra.png" alt="">
         </div>
     </section>
 
+    <script>
+
+        function launch(){
+            let foguete = document.querySelector(".foguete")
+            foguete.classList.remove('animation_rocket')
+            void foguete.offsetWidth;
+            foguete.classList.add('animation_rocket')
+        }
+    </script>
 </body>
 </html>
